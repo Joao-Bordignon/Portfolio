@@ -1,0 +1,270 @@
+html {
+    font-family: 'Open Sans', sans-serif;
+}
+
+body {
+    margin: 0;
+    background-color: #221F22;
+    color: #fff;
+}
+
+header {
+    margin-top: 2vh;
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: #4B4538;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    background-color: #4B4538;
+    align-items: center;
+}
+
+.mostrar-menu {
+    cursor: pointer;
+}
+
+input.checkbox-menu[type="checkbox"] {
+    display: none;
+    appearance: unset;
+    -webkit-appearance: none;
+}
+
+input.checkbox-menu[type="checkbox"]:checked ~ div.menu-recolhivel {
+    opacity: 1;
+    visibility: visible;
+}
+
+.menu-icon {
+    display: inline-block;
+    padding: 0.5em;
+    vertical-align: middle;
+}
+
+.menu-recolhivel {
+    display: inline-block;
+    opacity: 0;
+    vertical-align: middle;
+    visibility: hidden;
+    -webkit-transition: all 0.25s;
+    -moz-transition: all 0.25s;
+    -ms-transition: all 0.25s;
+    -o-transition: all 0.25s;
+    transition: all 0.25s;
+}
+
+ul.menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+ul.menu li {
+    font-weight: bold;
+    font-size: 0.8em;
+}
+
+ul.menu li a {
+    color: #fff;
+    display: block;
+    text-decoration: none;
+    padding: 2vw;
+}
+
+ul.menu li a:hover {
+    border: 1px solid #FFBB01;
+}
+
+ul.menu li a:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+
+.jumbotrom {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url("../img/banner.jpg");
+    height: 100%;
+    padding: 5vw;
+}
+
+.jumbotrom p {
+    font-size: 0.7rem;
+}
+
+.jumbotrom h1 {
+    margin: 0;
+    color: #FFBB01;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+}
+
+button {
+    padding: 1vw;
+    border: 2px solid #FFBB01;
+    border-radius: 1vw;
+    position: relative;
+    overflow: hidden;
+    background-color: transparent;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 1rem;
+    transition: 0.3s;
+    z-index: 1;
+    font-family: inherit;
+    color: #FFBB01;
+}
+
+button::before {
+    content: '';
+    width: 0;
+    height: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(0deg);
+    background: #FFBB01;
+    transition: 0.5s ease;
+    display: block;
+    z-index: -1;
+}
+
+button:hover::before {
+    width: 100%;
+    height: 100%;
+}
+
+button:hover {
+    color: #111;
+    transform: scale(0.95);
+}
+
+.main {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 0;
+    grid-row-gap: 0;
+    justify-items: center;
+    margin: 5vw;
+}
+
+.sobre {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: justify;
+}
+
+.sobre h3 {
+    color: #FFBB01;
+    font-size: 1.5rem;
+}
+
+.botoes {
+    display: flex;
+    flex-direction: row;
+}
+
+.botoes h4 {
+    margin: 3vw;
+    padding: 2vw;
+    border: #FFBB01 solid 2px;
+    border-radius: 3vw;
+}
+
+.botoes h4:hover {
+    transform: scale(0.9);
+}
+
+.recomendacoes {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 1fr);
+    grid-column-gap: 0;
+    grid-row-gap: 0;
+    justify-items: center;
+}
+
+.recomen {
+    text-align: center;
+    color: #FFBB01;
+}
+
+.card {
+    width: 190px;
+    height: 254px;
+    background: #0C0A14;
+    box-shadow: 7px 5px 10px rgb(38, 38, 38);
+    margin-bottom: 5vh;
+    border-radius: 1vw;
+}
+
+.pessoa {
+    height: 70px;
+    background-color: #FFBB01;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    border-radius: 1vw;
+}
+
+.pessoa img {
+    border-radius: 50%;
+}
+
+.pessoa p {
+    background-color: rgb(38, 38, 38);
+    padding: 1vw;
+    border-radius: 5px;
+}
+
+.Description {
+    border-color: rgb(38, 38, 38);
+    background-color: rgb(38, 38, 38);
+    transform: translate(5px, 6px);
+    width: 180px;
+    height: 150px;
+    border-radius: 5px;
+}
+
+.Description p {
+    padding: 1vw;
+    text-align: justify;
+    font-size: 0.71rem;
+}
+
+.sociais{
+    display: flex;
+    flex-direction: column;
+    padding-top: 3vh;
+}
+
+.sociais p{
+    margin: 3vw;
+}
+
+.instagram, .discord, .github, .linkedin{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.direitos{
+    text-align: center;
+    color: #2e2b28;
+}
