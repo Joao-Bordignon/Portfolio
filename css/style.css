@@ -137,6 +137,7 @@ button::before {
     left: 50%;
     transform: translate(-50%, -50%) rotate(0deg);
     background: #FFBB01;
+    border-radius: 0.9vw;
     transition: 0.5s ease;
     display: block;
     z-index: -1;
@@ -152,6 +153,10 @@ button:hover {
     transform: scale(0.95);
 }
 
+.nav-bar-pc {
+    display: none;
+}
+
 .main {
     display: grid;
     grid-template-columns: 1fr;
@@ -160,6 +165,13 @@ button:hover {
     grid-row-gap: 0;
     justify-items: center;
     margin: 5vw;
+}
+
+.foto img {
+    display: flex;
+    justify-content: center;
+    border-radius: 2vw;
+    box-shadow: 0 0 14px 6px rgba(0,0,0,0.27);
 }
 
 .sobre {
@@ -250,23 +262,112 @@ button:hover {
     font-size: 0.7;
 }
 
-.sociais{
+.sociais {
     display: flex;
     flex-direction: column;
     padding-top: 3vh;
 }
 
-.sociais p{
+.sociais p {
     margin: 3vw;
 }
 
-.instagram, .discord, .github, .linkedin{
+.discord,
+.github,
+.instagram,
+.linkedin {
     display: flex;
     flex-direction: row;
     align-items: center;
 }
 
-.direitos{
+.direitos {
     text-align: center;
     color: #2e2b28;
+}
+
+@media only screen and (min-width: 769px) {
+    ::-webkit-scrollbar {
+        width: 18px;
+    }
+
+    ::-webkit-scrollbar-track {
+        border-radius: 5px;
+        background-color: #4B4538;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        border-radius: 35px;
+        background-color: #ffbb019b;
+    }
+
+    header {
+        display: none;
+    }
+
+    .nav-bar-pc {
+        width: 100%;
+        background-color: #4B4538;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: nowrap;
+    }
+
+    .menu-pc ul {
+        display: flex;
+        flex-direction: row;
+
+    }
+
+    .menu-pc li {
+        display: flex;
+        margin: 2vw;
+        padding: 0.5vw;
+        font-size: 1.5rem;
+        align-items: center;
+    }
+
+    .menu-pc li:hover {
+        transition: 0.7s ease;
+        background-color: #FFBB01;
+        border: solid #ffbb0192 2px;
+        border-radius: 1vw;
+    }
+
+    .logo {
+        margin: 1vw;
+    }
+
+    .jumbotrom p {
+        font-size: 1.3rem;
+    }
+
+    .jumbotrom h1 {
+        font-size: 2.5rem;
+    }
+
+    .main {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 1fr;
+        grid-row-gap: 0;
+    }
+
+    .foto img {
+        width: 25vw;
+        height: 100%;
+    }
+
+    .recomendacoes {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 1fr;
+        grid-column-gap: 10px;
+        grid-row-gap: 0;
+    }
+
+    .sociais p{
+        margin: 2vh
+    }
 }
